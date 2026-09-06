@@ -10,9 +10,11 @@ A simple API wrapper to fetch NetShort series episodes and details via `book_id`
 - Lightweight and easy to integrate
 
 ## Usage
+
+```python
 if __name__ == '__main__':
     book_id = '2095785831247122434'
     ptest1 = NetShortDownloadAPI()
     episode_data = ptest1.get_episodes_from_unlockAdEpisode(book_id)
     print(episode_data['shortPlayEpisodeInfos'])
-    pass
+```
