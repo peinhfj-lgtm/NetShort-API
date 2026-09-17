@@ -34,37 +34,10 @@ class NetShortDownloadAPI:
     APP_VER = "2.0.3"
     BASE_URL = "https://appsecapi.netshort.com"
     RSA_PUBLIC_KEY = '''-----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2poXMstZ8NCWE7915MXz
-DWC5/t+oB2waGfskPqSZwLqxd4ZBR0H1cb1tAZRZcV7P+LmOd6SYNxhnELaWuKTD
-+D3xkz8Tt1L5j/ynGqVt1MDbiQIEzXQKUkNDSH6T0A+Xzo/67/8QOQXlVJfW06re
-sbaeNvibfx6Qc78j96bCIPlxPrtieilVTBHUFOXjirxK/ki/mO8P2smRbpt73fsQ
-WdGmTGMfYGvfPApGyxbxLkL/qrBjU25XpM8a0MBqzFWUAchHmqSBJ6Mbfam1SSgf
-3b2U28s67nOW+JiOrhd6iVLcsLFxXA54HX+Zbej3AbOB6jKaEmp/bz1amneE1NYX
-wwIDAQAB
+***
 -----END PUBLIC KEY-----'''
     RSA_PRIVATE_KEY = '''-----BEGIN PRIVATE KEY-----
-MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCK0Tl1pd7bjTRU93bWoHW1hLCD
-j2+9bg1MgY8j5C7xXaw6bJfToXhWbH1fXNbnFFVqxyYNErcuOUwJZxyDgcxUXM4yWnRseb2GF97G
-OicAQ2keDzVYmwky4lrSRwvcXutJRLPUCRQNfc6upfk2G5TKh6/CcP4TV1eXTF7+vdEw2SHxAOIT
-KbSfcaZXr/hVs6a1aRHsBF+7RG99ebwZIP6/AgIyqX9RbDVN6ixi1v2G3/bwAULHLSqGdSaqij/c
-a17fbFGITaeCeEaZ6d/P4ZuOK+PEPdbPQt6SbY4lZaYwRvdrpH73kigPITgDzIDONFybJ1m7wRKl
-q1wxWHwbimptAgMBAAECggEAPz3cYJXFtt5YphDrahJGLgEabYVOUc2ub1li/eX54OpdCWzpqneY
-nD7myyg/m5zu4SuDUVdibsOZuXrpSZw7m3+ATP5apgS8bDe5vTNHC16qqBAjrI9NHIp09/F4HNh9
-dq6/Am10XkUfgP+KTrU4DyDL2NijV+pltD8N1B5kDE1igokVcsavhnu2INoMRXYE78Wq6urNECuF
-Ww9hldv81M9m2w56t1CQOUukpo4mfmLjZRe2s+kwtcBVefGHP8Cj0OeH2dGltjl2YSQMRBFUCVoix
-YpOrcjIHoqzWri8IfUZ2tW+nUvHl5IZ9RVxefnFaLGnxiXd2sk6Sn4aD/l9YQKBgQDVv3HaOZxHRq
-lNSPrNGqplGhE066HnDsq6MlPukiovxE43CRBmpTnk9zDCqrDh9t2HbJuao7nSq5WlBERWgwqXU/q
-DpH43W7Y/lJfHkDv6A2m0viJa0a9x8+CJpNnCDu1ATo4/IQKwoXYice6JKnUyXgkGKn+HipiN6tO0
-EtWHlQKBgQCmQfklKFtXtm/FZ6NIMs+d+EyvaE5xNLKGYQxmiCR10WGYd8ZV+K0Q6qXHS+a32TirW
-B9F3TqPOklTytMrfPZB3BCXj4weEldb8W716G8FYf7LLhaT+MdpF7KDcruObwoQAvKV3N4eX6tUEM
-mdrx9hpCmmIU5EeXUkhGdmwk7BeQKBgAIXMkThJV8pGMTRvuo8pYgBnkN3PoklAuSZU2rU8Sawc9d
-j9k4atZtAs7BjvQEoyffmHwt/KHUgCoGnrgdulq7uOlgJRtbBxeGPUYC5L2z9lY4YAfwDawThTsPp
-4dtdDAMCAbAqYX1axu4FUUD0MltAwjPWPJMVzvIsZs+vE3mVAoGAJPja3OaCmZjadj2709xoyypic
-0dw2j/ry3JdfZec9A5h87P/CTNJ2U81GoLIhe3qakAohDLUSPGfSOD74NnjMXYswmeLs0xE3Q9tq4
-XK2pmWPby8DJ/wSHCapByplN0gkbr2E1mQk5SW1xT8oPJGukH1eRpC+3s/D6XaEMH5HZECgYEAigo
-X5l39LDsCgeaUcI4S9grkaas/WsKv37eqo3oD9Qk6VFiMM5L5Zig6aXJxuAPLVjb38caJRPmPmOXL
-T2kEP1E1h6OJOhEhETwVIUtcBzsK25ju9LqL89bC+W0uS7BPvk6Tcws/tXHCkQCTgb9jVXceZ2ox+
-6axvlW/5WgHt5Q=
+***
 -----END PRIVATE KEY-----'''
     def __init__(self):
         self.user_agent = None
@@ -119,7 +92,6 @@ T2kEP1E1h6OJOhEhETwVIUtcBzsK25ju9LqL89bC+W0uS7BPvk6Tcws/tXHCkQCTgb9jVXceZ2ox+
         decrypted_data = self.decrypt_response_payload(encrypt_key, encrypted_body)
         last_brace = decrypted_data.rfind('}')
         if last_brace != -1:
-            # 截取到最后一个 } 为止
             decrypted_data = decrypted_data[:last_brace + 1]
         return decrypted_data
 
@@ -144,51 +116,6 @@ T2kEP1E1h6OJOhEhETwVIUtcBzsK25ju9LqL89bC+W0uS7BPvk6Tcws/tXHCkQCTgb9jVXceZ2ox+
         json_data = json.loads(r_response)
         self.token = json_data['data']['token']
         self.user_id = json_data['data']['loginUser']['userId']
-
-
-    def get_episodes_from_unlockAdEpisode(self, book_id):
-        if not self.token or not self.user_id:
-            self.login()
-
-        payload = {
-            'codec': "",
-            'playClarity': "1080p",
-            'shortPlayId': str(book_id)
-        }
-        r_response = self.sec_request('/prod-app-api/video/shortPlay/base/detail_info/V2', payload)
-        json_data = json.loads(r_response)
-
-        for chapter in json_data['data']['shortPlayEpisodeInfos']:
-            if not chapter.get('playVoucher'):
-                if chapter.get('isLock'):
-                    req_unlock = self.unlock_ad(book_id, chapter.get('episodeNo'), chapter.get('episodeId'), adUnlockEpsType=1)
-
-                    if not req_unlock:
-                        self.login()
-                        req_unlock = self.unlock_ad(book_id, chapter.get('episodeNo'), chapter.get('episodeId'),
-                                                    adUnlockEpsType=1)
-                        if not req_unlock:
-                            input('ERROR')
-                            exit(1)
-                        pass
-                    pass
-
-                req_js_data = self.get_single_episode(book_id, chapter.get('episodeId'), chapter.get('episodeNo'))
-
-                try:
-
-                    for episode_chap in req_js_data["data"]["episodeList"]:
-                        episode_num = episode_chap["episodeNo"]
-                        json_data['data']['shortPlayEpisodeInfos'][episode_num - 1]['playVoucher'] = episode_chap[
-                            "playVoucher"]
-                        json_data['data']['shortPlayEpisodeInfos'][episode_num - 1]['subtitleList'] = episode_chap[
-                            "subtitleList"]
-                        pass
-
-                except Exception as e:
-                    pass
-        return json_data['data']
-
 
     def unlock_ad(self, book_id, episodeNo, episodeId, configId='1993944126552477698', adUnlockEpsType=1):
         payload = {
@@ -245,11 +172,6 @@ T2kEP1E1h6OJOhEhETwVIUtcBzsK25ju9LqL89bC+W0uS7BPvk6Tcws/tXHCkQCTgb9jVXceZ2ox+
         self.user_agent = (f"Mozilla/5.0 (Linux; Android 12; {model} Build/SP1A.210812.015; wv) "
                            f"AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{chrome_version} Mobile Safari/537.36")
 
-
-if __name__ == '__main__':
-    book_id = '2095785831247122434'
-    ptest1 = NetShortDownloadAPI()
-    episode_data = ptest1.get_episodes_from_unlockAdEpisode(book_id)
     print(episode_data['shortPlayEpisodeInfos'])
     pass
 
